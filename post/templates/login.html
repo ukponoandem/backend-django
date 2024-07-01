@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+ <!-- <style>
+    body{
+        background-color: forestgreen;
+        font-family: 'Courier New', Courier, monospace;
+    }
+#password{
+    width: 20%;
+    padding: 7px ;
+    border-radius: 15px;
+    margin: 5px;
+    
+}
+#submit{
+    margin: 5px;
+    border-radius: 10px;
+    width: 5%;
+    padding: 5px;
+}
+</style> -->
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label><br>
+        <input type="text" id="password" name="username" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit" id="submit">Login</button>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

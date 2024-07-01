@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- <style>
+
+body{
+        background-color: forestgreen;
+        font-family: 'Courier New', Courier, monospace;
+    }
+#register{
+        padding: 10px;
+        border-radius: 20px;
+        margin: 10px;
+        width: 25%;
+}
+
+
+#submit{
+        width: 5%;
+        padding: 4px ;
+        border-radius: 15px;
+        margin: 5px;
+} -->
+
+
+</style>
+    <h1>Create an account</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="fname">Username:</label><br>
+        <input type="text" name="username"  id="register" placeholder="Write a well defined title" required><br>
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="first_name" id="register" value="" placeholder="" required><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="last_name" id="register" value="" placeholder="" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email"name="email"  id="register" placeholder="Enter email e.g user@gmail.com" required><br>
+        <label for="password">password:</label><br>
+        <input type="password" name="password" id="register" value="" placeholder="Enter  a strong password" required><br>
+        <br>
+        <input type="submit" id="submit" value="Submit">
+    </form> 
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{%static  'css/myfirst.css '%}">
+</head>
+<body>
+
+
+<nav>
+<ul class="navbar"> 
+  <li><a href="{% url 'home'%}" >HOME</a></li>
+  <li><a href="{% url 'login'%}"  >LOGIN</a></li>
+  <li><a href="{% url 'register'%}" >REGISTER</a></li>
+  <li><a href="{% url 'dashboard'%}" >DASHBOARD</a></li>
+  <li><a href="{% url 'add_post'%}" >ADD_POST</a></li>
+  
+</ul>
+
+</nav>
+
+<div class="content">
+{% block content %}
+{% endblock %}
+</body>
+</html>
